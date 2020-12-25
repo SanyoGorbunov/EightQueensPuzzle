@@ -10,8 +10,19 @@
 
     <ContentPage.Content>
       <StackLayout>
-          <Button Text="Simulate"
-                  Command="{Binding NavigateToSimulation}"></Button>
+          <Picker Title="Select an Algorithm"
+                  ItemDisplayBinding="{Binding Name}"
+                  ItemsSource="{Binding Algorithms}"
+                  SelectedItem="{Binding SelectedAlgorithm}">
+          </Picker>
+          <Picker Title="Select a Size"
+                  ItemDisplayBinding="{Binding Name}"
+                  ItemsSource="{Binding Sizes}"
+                  SelectedItem="{Binding SelectedSize}">
+          </Picker>
+            <Button Text="Simulate"
+                  Command="{Binding NavigateToSimulation}">
+          </Button>
       </StackLayout>
   </ContentPage.Content>
 </ContentPage>
