@@ -1,6 +1,5 @@
-﻿using System;
+﻿using EightQueensPuzzle.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace EightQueensPuzzle
 {
@@ -10,7 +9,9 @@ namespace EightQueensPuzzle
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var mainPage = new Views.MainPage();
+            mainPage.BindingContext = new MainViewModel();
+            MainPage = new NavigationPage(mainPage);
         }
 
         protected override void OnStart()

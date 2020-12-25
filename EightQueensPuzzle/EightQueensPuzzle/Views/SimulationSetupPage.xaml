@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vw="clr-namespace:EightQueensPuzzle.ViewModels;assembly=EightQueensPuzzle"
+             x:Class="EightQueensPuzzle.Views.SimulationSetupPage">
+
+    <ContentPage.BindingContext>
+        <vw:SimulationSetupViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+      <StackLayout>
+          <Button Text="Simulate"
+                  Command="{Binding NavigateToSimulation}"></Button>
+      </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
